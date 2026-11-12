@@ -66,7 +66,8 @@
   :root {
     --background-primary: #111110;
     --text-primary: #f9c76a;
-    /* Finns inte i Figma än – kontrolleras i Steg 9 */
+    /* Hover-färg: saknas i Figmas dark mode, vald för kontrast 6,7:1 mot bakgrunden */
     --text-secondary: #b8955a;
+    /* text/tertiary (#83775a) behålls – kontrast 4,3:1 mot den mörka bakgrunden */
   }
 }
