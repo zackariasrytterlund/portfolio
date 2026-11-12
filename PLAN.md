@@ -80,7 +80,7 @@ Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp(
 - [x] **Steg 4: Hero.** Rubriken och bento-rutnätet med Media Cards (16:9, 4:5 och 5:4).
 - [x] **Steg 5: Content slider.** Horisontell slider med scroll-snap och fungerande pilar.
 - [x] **Steg 6: Arbeten.** Projektlistan (nr, projekt, roll, år och länk).
-- [ ] **Steg 7: Kompetenser.** Tools, Clients, Education och Hobbies.
+- [x] **Steg 7: Kompetenser.** Tools, Clients, Education och Hobbies.
 - [ ] **Steg 8: Text.** Om mig-sektionen.
 - [ ] **Steg 9: Dark mode.** Kontrollera mot Figmas dark mode-ramar och justera.
 - [ ] **Steg 10: Responsiv kontroll.** Testa på 375, 768, 1024 och 1440 px. Kontrollera tillgänglighet (kontrast, fokus och alt-texter).

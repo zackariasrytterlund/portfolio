@@ -107,3 +107,37 @@
     clip-path: none;
   }
 }
+
+/* ---- Kompetenser (Figma: Kompetenser) ----
+   Mobil: Tools + Education på rad 2, Clients + Hobbies på rad 3.
+   Desktop: Tools + Clients på rad 1, Education + Hobbies på rad 2.   */
+
+.skills > * {
+  align-self: start;
+}
+
+.skills__group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Mobil */
+.skills__title     { grid-column: 1 / -1;     grid-row: 1; }
+.skills__tools     { grid-column: 1 / span 3; grid-row: 2; }
+.skills__education { grid-column: 4 / span 3; grid-row: 2; }
+.skills__clients   { grid-column: 1 / span 3; grid-row: 3; }
+.skills__hobbies   { grid-column: 4 / span 3; grid-row: 3; }
+
+/* Desktop */
+@media (min-width: 768px) {
+  .skills {
+    row-gap: 80px;
+  }
+
+  .skills__title     { grid-column: 1 / span 4; grid-row: 1; }
+  .skills__tools     { grid-column: 5 / span 4; grid-row: 1; }
+  .skills__clients   { grid-column: 9 / span 4; grid-row: 1; }
+  .skills__education { grid-column: 5 / span 4; grid-row: 2; }
+  .skills__hobbies   { grid-column: 9 / span 4; grid-row: 2; }
+}
