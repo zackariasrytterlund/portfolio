@@ -29,11 +29,13 @@ Vi jobbar ett steg i taget. Varje steg avslutas med en commit och en push till G
 |---|---|
 | `background/primary` | `#F9C76A` |
 | `text/primary` | `#111110` |
+| `text/seconday` (hover) | `#5E5748` |
 | `text/tertiary` | `#83775A` |
 | Heading | Space Grotesk Bold, 132 px (mobil 56 px), letter-spacing −7 % |
 | Sub-Heading | Space Grotesk Medium, 32 px (mobil 24 px) |
 | Body | Inter Regular, 20 px (mobil 16 px) |
 | Link S | Inter Regular, 20 px (mobil 16 px) |
+| Link L | Inter Regular, 64 px (mobil 40 px) |
 | Grid | Desktop: 12 kolumner, 32 px marginal. Mobil: 6 kolumner, 16 px marginal. Sektionerna använder 16 px gap |
 | Hörnradie | 32 px (mobil 16 px) |
 | Dark mode | Bakgrund `#111110`, text `#F9C76A` |
@@ -73,7 +75,7 @@ Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp(
 - [x] **Steg 0: Plan och repo.** Skriv den här planen, kör `git init` och skapa GitHub-repot.
 - [x] **Steg 1: Grund.** `index.html`-skelett, reset, tokens (ljust och mörkt tema), typsnitt och grid och brytpunkter.
 - [x] **Steg 2: Navigation.** Desktop-nav och mobilnav som öppnas och stängs (JS, `aria-expanded`).
-- [ ] **Steg 3: Link-komponent.** Lägena Default och Hover i storlekarna S och L. Hover-rörelsen görs i CSS.
+- [x] **Steg 3: Link-komponent.** Lägena Default och Hover i storlekarna S och L. Hover-rörelsen görs i CSS.
 - [ ] **Steg 4: Hero.** Rubriken och bento-rutnätet med Media Cards (16:9, 4:5 och 5:4).
 - [ ] **Steg 5: Content slider.** Horisontell slider med scroll-snap och fungerande pilar.
 - [ ] **Steg 6: Arbeten.** Projektlistan (nr, projekt, roll, år och länk).
@@ -86,4 +88,5 @@ Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp(
 
 ## Öppna frågor (tas upp när vi kommer dit)
 - Content slider finns inte i mobilramen (`38:403`). Ska den döljas på mobil eller ha en egen mobilversion?
+- Hover-färgen i dark mode finns inte i Figma. Tillfälligt används `#B8955A`, som kontrolleras i Steg 9.
 - Mellanstorlekar (cirka 768–1024 px) finns inte i Figma. Där skalar vi mellan mobil och desktop.

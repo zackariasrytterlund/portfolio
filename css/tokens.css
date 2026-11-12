@@ -12,6 +12,7 @@
   /* ---- Färger (ljust tema) ---- */
   --background-primary: #f9c76a;
   --text-primary: #111110;
+  --text-secondary: #5e5748; /* Figma: text/seconday – länkar i hover-läge */
   --text-tertiary: #83775a;
   --media-placeholder: #d9d9d9;
 
@@ -24,7 +25,7 @@
   --text-sub-heading: clamp(24px, calc(24px + 8 * (100vw - 375px) / 1065), 32px);
   --text-body: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
   --text-link-sm: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
-  --text-link-lg: 40px; /* Link L – används i mobilmenyn */
+  --text-link-lg: clamp(40px, calc(40px + 24 * (100vw - 375px) / 1065), 64px);
 
   /* Heading har letter-spacing -7 % i Figma */
   --tracking-heading: -0.07em;
@@ -34,6 +35,10 @@
   --grid-margin: clamp(16px, calc(16px + 16 * (100vw - 375px) / 1065), 32px);
   --grid-gap: 16px;
   --design-size: 1440px;
+
+  /* ---- Rörelse ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.2s;
 
   /* ---- Former ---- */
   --corner-radius: clamp(16px, calc(16px + 16 * (100vw - 375px) / 1065), 32px);
@@ -53,5 +58,7 @@
   :root {
     --background-primary: #111110;
     --text-primary: #f9c76a;
+    /* Finns inte i Figma än – kontrolleras i Steg 9 */
+    --text-secondary: #b8955a;
   }
 }
