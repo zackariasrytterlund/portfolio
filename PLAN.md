@@ -1,5 +1,7 @@
 # Byggplan: Portfolio (HTML + CSS)
 
+**Live:** https://zackariasrytterlund.github.io/portfolio/
+
 Sajten byggs från Figma-filen [Min Portfolio](https://www.figma.com/design/P29nKuCwQAzURb0Zy3SA3w/Min-Portfolio).
 Den ska följa designen exakt och vara responsiv.
 Vi jobbar ett steg i taget. Varje steg avslutas med en commit och en push till GitHub.
@@ -86,7 +88,7 @@ Sidan är testad på 320, 375, 767, 768, 1024, 1440 och 1920 px och har inget si
 - [x] **Steg 8: Text.** Om mig-sektionen.
 - [x] **Steg 9: Dark mode.** Kontrollera mot Figmas dark mode-ramar och justera.
 - [x] **Steg 10: Responsiv kontroll.** Testa på 375, 768, 1024 och 1440 px. Kontrollera tillgänglighet (kontrast, fokus och alt-texter).
-- [ ] **Steg 11: Publicera.** Slå på GitHub Pages och kontrollera den publicerade sajten.
+- [x] **Steg 11: Publicera.** Slå på GitHub Pages och kontrollera den publicerade sajten.
 - [ ] **Steg 12: Undersidor.** Case, About och Contact. *Väntar på design i Figma.*
 
 ## Öppna frågor (tas upp när vi kommer dit)
