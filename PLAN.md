@@ -81,12 +81,13 @@ Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp(
 - [x] **Steg 5: Content slider.** Horisontell slider med scroll-snap och fungerande pilar.
 - [x] **Steg 6: Arbeten.** Projektlistan (nr, projekt, roll, år och länk).
 - [x] **Steg 7: Kompetenser.** Tools, Clients, Education och Hobbies.
-- [ ] **Steg 8: Text.** Om mig-sektionen.
+- [x] **Steg 8: Text.** Om mig-sektionen.
 - [ ] **Steg 9: Dark mode.** Kontrollera mot Figmas dark mode-ramar och justera.
 - [ ] **Steg 10: Responsiv kontroll.** Testa på 375, 768, 1024 och 1440 px. Kontrollera tillgänglighet (kontrast, fokus och alt-texter).
 - [ ] **Steg 11: Publicera.** Slå på GitHub Pages och kontrollera den publicerade sajten.
 - [ ] **Steg 12: Undersidor.** Case, About och Contact. *Väntar på design i Figma.*
 
 ## Öppna frågor (tas upp när vi kommer dit)
+- Contact-länken i navigeringen pekar på `#contact`, men startsidan har ingen kontaktsektion i Figma än.
 - Hover-färgen i dark mode finns inte i Figma. Tillfälligt används `#B8955A`, som kontrolleras i Steg 9.
 - Mellanstorlekar (cirka 768–1024 px) finns inte i Figma. Där skalar vi mellan mobil och desktop.

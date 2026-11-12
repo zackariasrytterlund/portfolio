@@ -141,3 +141,19 @@
   .skills__education { grid-column: 5 / span 4; grid-row: 2; }
   .skills__hobbies   { grid-column: 9 / span 4; grid-row: 2; }
 }
+
+/* ---- Text / Om mig (Figma: Text) ---- */
+
+.about > * {
+  align-self: start;
+}
+
+/* Mobil: rubrik och text under varandra */
+.about__title { grid-column: 1 / -1; grid-row: 1; }
+.about__text  { grid-column: 1 / -1; grid-row: 2; }
+
+/* Desktop: rubrik i kolumn 1, text i kolumn 5–10 */
+@media (min-width: 768px) {
+  .about__title { grid-column: 1 / span 4; grid-row: 1; }
+  .about__text  { grid-column: 5 / span 6; grid-row: 1; }
+}
