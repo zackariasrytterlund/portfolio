@@ -24,6 +24,7 @@
   --text-sub-heading: clamp(24px, calc(24px + 8 * (100vw - 375px) / 1065), 32px);
   --text-body: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
   --text-link-sm: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
+  --text-link-lg: 40px; /* Link L – används i mobilmenyn */
 
   /* Heading har letter-spacing -7 % i Figma */
   --tracking-heading: -0.07em;

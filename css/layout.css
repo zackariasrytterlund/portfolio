@@ -40,6 +40,13 @@ body {
   line-height: 1;
 }
 
+.link-lg {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-link-lg);
+  line-height: 1;
+}
+
 /* ---- Sidans bredd: designen är 1440 px och centreras på större skärmar ---- */
 .page {
   max-width: var(--design-size);

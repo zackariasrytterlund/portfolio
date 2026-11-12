@@ -14,13 +14,41 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/sections.css">
+
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <div class="page">
 
-    <!-- Steg 2: Navigation -->
-    <header class="site-header"></header>
+    <header class="site-header">
+      <nav class="nav" aria-label="Huvudmeny">
+        <div class="nav__bar">
+          <a class="nav__name link-sm" href="./">Zackarias Rytterlund</a>
+
+          <!-- Desktop -->
+          <ul class="nav__links">
+            <li><a class="link-sm" href="#case">Case</a></li>
+            <li><a class="link-sm" href="#about">About</a></li>
+            <li><a class="link-sm" href="#contact">Contact</a></li>
+          </ul>
+
+          <!-- Mobil -->
+          <button class="nav__toggle link-sm" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-inner">
+            <ul>
+              <li><a class="link-lg" href="#case">Case</a></li>
+              <li><a class="link-lg" href="#about">About</a></li>
+              <li><a class="link-lg" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <main>
       <!-- Steg 4: Hero -->

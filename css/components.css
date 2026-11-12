@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Komponenter – återanvändbara delar från Figma-sidan "Components".
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Navigation (Figma: Navigation – Desktop / Mobile Open=False / Mobile Open=True)
+   -------------------------------------------------------------------------- */
+
+.nav {
+  background-color: var(--background-primary);
+  padding: var(--grid-margin);
+}
+
+/* Översta raden: namn till vänster, länkar/knapp till höger */
+.nav__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__name {
+  white-space: nowrap;
+}
+
+/* Desktop-länkarna (Case, About, Contact) */
+.nav__links {
+  display: none;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Länkarna har fasta bredder i Figma (48, 57 och 76 px vid 20 px text) */
+.nav__links li:nth-child(1) a { width: 2.4em; }
+.nav__links li:nth-child(2) a { width: 2.85em; }
+.nav__links li:nth-child(3) a { width: 3.8em; }
+
+.nav__links a {
+  display: block;
+}
+
+/* Menu/Close-knappen (bara mobil) */
+.nav__toggle {
+  min-width: 2.6875em; /* 43 px i Figma */
+  text-align: left;
+}
+
+/* Mobilmenyn: fälls ut under översta raden */
+.nav__menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition:
+    grid-template-rows 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.4s;
+}
+
+.nav__menu-inner {
+  overflow: hidden;
+}
+
+.nav__menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 64px; /* avstånd mellan översta raden och länkarna */
+}
+
+/* Länkarna glider in en i taget när menyn öppnas */
+.nav__menu li {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav__menu li:nth-child(2) { transition-delay: 0.05s; }
+.nav__menu li:nth-child(3) { transition-delay: 0.1s; }
+
+.nav__menu a {
+  display: block;
+}
+
+/* Öppet läge */
+.nav.is-open .nav__menu {
+  grid-template-rows: 1fr;
+  visibility: visible;
+}
+
+.nav.is-open .nav__menu li {
+  opacity: 1;
+  transform: none;
+}
+
+/* Desktop: visa länkarna, dölj knappen och mobilmenyn */
+@media (min-width: 768px) {
+  .nav__links {
+    display: flex;
+  }
+
+  .nav__toggle,
+  .nav__menu {
+    display: none;
+  }
+}
+
+/* Synlig fokusmarkering för tangentbordsanvändare */
+.nav a:focus-visible,
+.nav button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
