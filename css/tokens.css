@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Design-tokens – hämtade från variablerna i Figma.
+
+   Figma har två lägen: Mobil (375 px) och Desktop (1440 px).
+   Storlekarna skalar mjukt mellan dem med clamp(), så att de blir exakt
+   som i Figma på 375 px och 1440 px.
+
+   Formel:  min + (max - min) * (100vw - 375px) / (1440 - 375)
+   ========================================================================== */
+
+:root {
+  /* ---- Färger (ljust tema) ---- */
+  --background-primary: #f9c76a;
+  --text-primary: #111110;
+  --text-tertiary: #83775a;
+  --media-placeholder: #d9d9d9;
+
+  /* ---- Typsnitt ---- */
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* ---- Textstorlekar (mobil → desktop) ---- */
+  --text-heading: clamp(56px, calc(56px + 76 * (100vw - 375px) / 1065), 132px);
+  --text-sub-heading: clamp(24px, calc(24px + 8 * (100vw - 375px) / 1065), 32px);
+  --text-body: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
+  --text-link-sm: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
+
+  /* Heading har letter-spacing -7 % i Figma */
+  --tracking-heading: -0.07em;
+
+  /* ---- Grid och avstånd ---- */
+  --grid-columns: 6;
+  --grid-margin: clamp(16px, calc(16px + 16 * (100vw - 375px) / 1065), 32px);
+  --grid-gap: 16px;
+  --design-size: 1440px;
+
+  /* ---- Former ---- */
+  --corner-radius: clamp(16px, calc(16px + 16 * (100vw - 375px) / 1065), 32px);
+
+  color-scheme: light dark;
+}
+
+/* Desktop-grid: 12 kolumner från surfplattestorlek och uppåt */
+@media (min-width: 768px) {
+  :root {
+    --grid-columns: 12;
+  }
+}
+
+/* ---- Mörkt tema (Figma: Dark Mode) – följer besökarens systeminställning ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-primary: #111110;
+    --text-primary: #f9c76a;
+  }
+}

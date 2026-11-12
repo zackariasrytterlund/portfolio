@@ -30,12 +30,13 @@ Vi jobbar ett steg i taget. Varje steg avslutas med en commit och en push till G
 | `background/primary` | `#F9C76A` |
 | `text/primary` | `#111110` |
 | `text/tertiary` | `#83775A` |
-| Heading | Space Grotesk Bold, 132 px, line-height 100 %, letter-spacing −7 |
-| Sub-Heading | Space Grotesk Medium, 32 px |
-| Body | Inter Regular, 20 px |
-| Link S | Inter Regular, 20 px |
-| Grid | 12 kolumner, 32 px gap, 32 px marginal, designbredd 1440 |
-| Hörnradie | 32 px |
+| Heading | Space Grotesk Bold, 132 px (mobil 56 px), letter-spacing −7 % |
+| Sub-Heading | Space Grotesk Medium, 32 px (mobil 24 px) |
+| Body | Inter Regular, 20 px (mobil 16 px) |
+| Link S | Inter Regular, 20 px (mobil 16 px) |
+| Grid | Desktop: 12 kolumner, 32 px marginal. Mobil: 6 kolumner, 16 px marginal. Sektionerna använder 16 px gap |
+| Hörnradie | 32 px (mobil 16 px) |
+| Dark mode | Bakgrund `#111110`, text `#F9C76A` |
 
 ## Filstruktur
 
@@ -58,10 +59,19 @@ images/           – bilder (platshållare tills vidare)
 3. Jämför i webbläsaren med Figma, både på 1440 px och 375 px.
 4. Commit med meddelandet `Steg N: …` och push.
 
+## Förhandsvisning
+Starta en lokal server i projektmappen och öppna http://localhost:5500 (eller använd Live Server i VS Code):
+
+```bash
+python3 -m http.server 5500
+```
+
+Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp()`. Vid 768 px och uppåt används 12 kolumner.
+
 ## Steg
 
 - [x] **Steg 0: Plan och repo.** Skriv den här planen, kör `git init` och skapa GitHub-repot.
-- [ ] **Steg 1: Grund.** `index.html`-skelett, reset, tokens (ljust och mörkt tema), typsnitt och grid och brytpunkter.
+- [x] **Steg 1: Grund.** `index.html`-skelett, reset, tokens (ljust och mörkt tema), typsnitt och grid och brytpunkter.
 - [ ] **Steg 2: Navigation.** Desktop-nav och mobilnav som öppnas och stängs (JS, `aria-expanded`).
 - [ ] **Steg 3: Link-komponent.** Lägena Default och Hover i storlekarna S och L. Hover-rörelsen görs i CSS.
 - [ ] **Steg 4: Hero.** Rubriken och bento-rutnätet med Media Cards (16:9, 4:5 och 5:4).
@@ -77,4 +87,3 @@ images/           – bilder (platshållare tills vidare)
 ## Öppna frågor (tas upp när vi kommer dit)
 - Content slider finns inte i mobilramen (`38:403`). Ska den döljas på mobil eller ha en egen mobilversion?
 - Mellanstorlekar (cirka 768–1024 px) finns inte i Figma. Där skalar vi mellan mobil och desktop.
-- Letter-spacing −7 på Heading: jag kontrollerar mot Figma om det är px eller %.

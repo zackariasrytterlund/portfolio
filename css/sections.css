@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Sektioner – hero, arbeten, kompetenser och text.
+   ========================================================================== */
+
+/* ---- Hero ---- */
+.hero__title {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+  .hero__title {
+    grid-column: 1 / span 11; /* Figma: kolumn 1, spänner 11 */
+  }
+}

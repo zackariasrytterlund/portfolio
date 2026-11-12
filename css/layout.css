@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Layout – grundtypografi, grid och sektioner.
+   ========================================================================== */
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: normal;
+}
+
+/* ---- Textstilar från Figma (sidan Styles) ---- */
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-heading);
+  line-height: normal;
+  letter-spacing: var(--tracking-heading);
+}
+
+.sub-heading {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: var(--text-sub-heading);
+  line-height: normal;
+}
+
+.body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-body);
+  line-height: normal;
+}
+
+.link-sm {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-link-sm);
+  line-height: 1;
+}
+
+/* ---- Sidans bredd: designen är 1440 px och centreras på större skärmar ---- */
+.page {
+  max-width: var(--design-size);
+  margin-inline: auto;
+}
+
+/* ---- Grid: 6 kolumner på mobil, 12 på desktop (som i Figma) ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  gap: var(--grid-gap);
+  padding: var(--grid-margin);
+}
+
+/* Hjälpklass för skärmläsartext som inte ska synas */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
