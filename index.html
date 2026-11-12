@@ -80,7 +80,52 @@
           <button class="slider__button slider__button--next" type="button" aria-label="Nästa bild">→</button>
         </div>
       </section>
-      <!-- Steg 6: Arbeten  (id="case") -->
+      <!-- Arbeten -->
+      <section class="work" id="case" aria-labelledby="work-title">
+        <h2 id="work-title" class="visually-hidden">Arbeten</h2>
+        <!-- role-attributen behåller tabellens betydelse för skärmläsare trots att CSS gör om layouten -->
+        <table class="work__table" role="table">
+          <thead role="rowgroup">
+            <tr class="work__row work__head" role="row">
+              <th class="work__nr" role="columnheader" scope="col">NR</th>
+              <th class="work__project" role="columnheader" scope="col">Project</th>
+              <th class="work__role" role="columnheader" scope="col">Role</th>
+              <th class="work__year" role="columnheader" scope="col">Year</th>
+              <th class="work__file" role="columnheader" scope="col">file</th>
+            </tr>
+          </thead>
+          <tbody role="rowgroup">
+              <tr class="work__row" role="row">
+                <td class="work__nr body" role="cell">1</td>
+                <td class="work__project sub-heading" role="cell">Campaign Animation</td>
+                <td class="work__role body" role="cell">Role</td>
+                <td class="work__year body" role="cell">2026</td>
+                <td class="work__file body" role="cell">file</td>
+              </tr>
+              <tr class="work__row" role="row">
+                <td class="work__nr body" role="cell">2</td>
+                <td class="work__project sub-heading" role="cell">Farmmate - App</td>
+                <td class="work__role body" role="cell">Role</td>
+                <td class="work__year body" role="cell">2026</td>
+                <td class="work__file body" role="cell">file</td>
+              </tr>
+              <tr class="work__row" role="row">
+                <td class="work__nr body" role="cell">3</td>
+                <td class="work__project sub-heading" role="cell">TON - App</td>
+                <td class="work__role body" role="cell">Role</td>
+                <td class="work__year body" role="cell">2026</td>
+                <td class="work__file body" role="cell">file</td>
+              </tr>
+              <tr class="work__row" role="row">
+                <td class="work__nr body" role="cell">4</td>
+                <td class="work__project sub-heading" role="cell">SPÅR</td>
+                <td class="work__role body" role="cell">Role</td>
+                <td class="work__year body" role="cell">2026</td>
+                <td class="work__file body" role="cell">file</td>
+              </tr>
+          </tbody>
+        </table>
+      </section>
       <!-- Steg 7: Kompetenser -->
       <!-- Steg 8: Text      (id="about") -->
     </main>

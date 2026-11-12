@@ -27,3 +27,83 @@
   .hero__card-4 { grid-column: 1 / span 4;  grid-row: 4; }
   .hero__card-5 { grid-column: 5 / span 8;  grid-row: 4; }
 }
+
+/* ---- Arbeten (Figma: Arbeten) ----
+   En tabell där varje rad är ett eget 12-kolumnsgrid, så att
+   kolumnerna hamnar exakt som i Figma.                         */
+
+.work {
+  padding: var(--grid-margin);
+}
+
+.work__table {
+  --row-gap: 16px; /* mobil */
+  display: grid;
+  row-gap: var(--row-gap);
+  width: 100%;
+}
+
+.work__table tbody {
+  display: grid;
+  row-gap: var(--row-gap);
+}
+
+.work__row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+  align-items: center;
+}
+
+.work__row > * {
+  text-align: left;
+}
+
+/* Rubrikraden (NR, Project, Role, Year, file) */
+.work__head {
+  align-items: start;
+}
+
+.work__head th {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* Mobil: NR, Project 2–8, Role 9–10, Year 11–12, file döljs */
+.work__nr      { grid-column: 1; }
+.work__project { grid-column: 2 / span 7; }
+.work__role    { grid-column: 9 / span 2; }
+.work__year    { grid-column: 11 / span 2; }
+.work__file    { display: none; }
+
+/* NR-rubriken syns inte på mobil men läses upp av skärmläsare */
+.work__head .work__nr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .work__table {
+    --row-gap: 5px;
+  }
+
+  .work__nr      { grid-column: 1; }
+  .work__project { grid-column: 2 / span 6; }
+  .work__role    { grid-column: 8 / span 2; }
+  .work__year    { grid-column: 10; }
+  .work__file    { display: block; grid-column: 11 / span 2; }
+
+  .work__head .work__nr {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+  }
+}

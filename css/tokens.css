@@ -30,6 +30,10 @@
   /* Heading: radhöjd som i Figma (71 px på mobil, 168 px på desktop) */
   --leading-heading: clamp(71px, calc(71px + 97 * (100vw - 375px) / 1065), 168px);
 
+  /* Sub-Heading och Body: radhöjd som i Figma (avrundad till hela pixlar) */
+  --leading-sub-heading: clamp(31px, calc(31px + 10 * (100vw - 375px) / 1065), 41px);
+  --leading-body: clamp(19px, calc(19px + 5 * (100vw - 375px) / 1065), 24px);
+
   /* Heading har letter-spacing -7 % i Figma */
   --tracking-heading: -0.07em;
 

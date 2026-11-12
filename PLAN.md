@@ -33,8 +33,8 @@ Vi jobbar ett steg i taget. Varje steg avslutas med en commit och en push till G
 | `text/seconday` (hover) | `#5E5748` |
 | `text/tertiary` | `#83775A` |
 | Heading | Space Grotesk Bold, 132 px (mobil 56 px), radhöjd 168 px (mobil 71 px), letter-spacing −7 % |
-| Sub-Heading | Space Grotesk Medium, 32 px (mobil 24 px) |
-| Body | Inter Regular, 20 px (mobil 16 px) |
+| Sub-Heading | Space Grotesk Medium, 32 px (mobil 24 px), radhöjd 41 px (mobil 31 px) |
+| Body | Inter Regular, 20 px (mobil 16 px), radhöjd 24 px (mobil 19 px) |
 | Link S | Inter Regular, 20 px (mobil 16 px) |
 | Link L | Inter Regular, 64 px (mobil 40 px) |
 | Grid | Desktop: 12 kolumner, 32 px marginal. Mobil: 6 kolumner, 16 px marginal. Sektionerna använder 16 px gap |
@@ -79,7 +79,7 @@ Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp(
 - [x] **Steg 3: Link-komponent.** Lägena Default och Hover i storlekarna S och L. Hover-rörelsen görs i CSS.
 - [x] **Steg 4: Hero.** Rubriken och bento-rutnätet med Media Cards (16:9, 4:5 och 5:4).
 - [x] **Steg 5: Content slider.** Horisontell slider med scroll-snap och fungerande pilar.
-- [ ] **Steg 6: Arbeten.** Projektlistan (nr, projekt, roll, år och länk).
+- [x] **Steg 6: Arbeten.** Projektlistan (nr, projekt, roll, år och länk).
 - [ ] **Steg 7: Kompetenser.** Tools, Clients, Education och Hobbies.
 - [ ] **Steg 8: Text.** Om mig-sektionen.
 - [ ] **Steg 9: Dark mode.** Kontrollera mot Figmas dark mode-ramar och justera.
