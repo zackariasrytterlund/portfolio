@@ -2,13 +2,28 @@
    Sektioner – hero, arbeten, kompetenser och text.
    ========================================================================== */
 
-/* ---- Hero ---- */
-.hero__title {
-  grid-column: 1 / -1;
+/* ---- Hero ----
+   Bento-rutnät med Media Cards. Placeringen följer Figma exakt:
+   mobil = 6 kolumner, desktop = 12 kolumner.                         */
+
+.hero > * {
+  align-self: start;
 }
 
+/* Mobil (Figma: Hero – Breakpoint=Mobile) */
+.hero__title  { grid-column: 1 / -1;     grid-row: 1; }
+.hero__card-1 { grid-column: 1 / -1;     grid-row: 2; }        /* 16:9 */
+.hero__card-2 { grid-column: 1 / span 4; grid-row: 3 / span 2; } /* 4:5 */
+.hero__card-3 { grid-column: 5 / span 2; grid-row: 3; }        /* 5:4 */
+.hero__card-4 { grid-column: 1 / span 3; grid-row: 5; }        /* 5:4 */
+.hero__card-5 { grid-column: 4 / span 3; grid-row: 5; }        /* 5:4 */
+
+/* Desktop (Figma: Hero – Breakpoint=Desktop) */
 @media (min-width: 768px) {
-  .hero__title {
-    grid-column: 1 / span 11; /* Figma: kolumn 1, spänner 11 */
-  }
+  .hero__title  { grid-column: 1 / span 11; grid-row: 1; }
+  .hero__card-1 { grid-column: 1 / -1;      grid-row: 2; }
+  .hero__card-2 { grid-column: 1 / span 6;  grid-row: 3; }
+  .hero__card-3 { grid-column: 7 / span 6;  grid-row: 3; }
+  .hero__card-4 { grid-column: 1 / span 4;  grid-row: 4; }
+  .hero__card-5 { grid-column: 5 / span 8;  grid-row: 4; }
 }

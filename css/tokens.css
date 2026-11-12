@@ -27,6 +27,9 @@
   --text-link-sm: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
   --text-link-lg: clamp(40px, calc(40px + 24 * (100vw - 375px) / 1065), 64px);
 
+  /* Heading: radhöjd som i Figma (71 px på mobil, 168 px på desktop) */
+  --leading-heading: clamp(71px, calc(71px + 97 * (100vw - 375px) / 1065), 168px);
+
   /* Heading har letter-spacing -7 % i Figma */
   --tracking-heading: -0.07em;
 
