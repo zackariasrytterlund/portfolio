@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <!-- Färg på mobilwebbläsarens adressfält (ljust och mörkt tema) -->
   <meta name="theme-color" content="#f9c76a" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
-  <meta name="description" content="Portfolio för Zackarias Rytterlund, digital designer i Göteborg.">
+  <meta name="description" content="Portfolio of Zackarias Rytterlund, digital designer based in Gothenburg.">
 
   <!-- Typsnitt: Space Grotesk (rubriker) och Inter (brödtext) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
   <div class="page">
 
     <header class="site-header">
-      <nav class="nav" aria-label="Huvudmeny">
+      <nav class="nav" aria-label="Main">
         <div class="nav__bar">
           <a class="nav__name link-sm" href="./">Zackarias Rytterlund</a>
 
@@ -69,8 +69,8 @@
       </section>
 
       <!-- Content slider -->
-      <section class="slider grid" aria-label="Projektbilder">
-        <div class="slider__track" tabindex="0" aria-label="Bilder, svep eller använd pilarna">
+      <section class="slider grid" aria-label="Project images">
+        <div class="slider__track" tabindex="0" role="group" aria-label="Image slider">
           <!-- Platshållare: byt till <img src="images/..." alt="..."> inuti varje kort -->
           <div class="media-card media-card--4-5"></div>
           <div class="media-card media-card--4-5"></div>
@@ -79,13 +79,13 @@
         </div>
 
         <div class="slider__controls">
-          <button class="slider__button slider__button--prev" type="button" aria-label="Föregående bild">←</button>
-          <button class="slider__button slider__button--next" type="button" aria-label="Nästa bild">→</button>
+          <button class="slider__button slider__button--prev" type="button" aria-label="Previous image">←</button>
+          <button class="slider__button slider__button--next" type="button" aria-label="Next image">→</button>
         </div>
       </section>
       <!-- Arbeten -->
       <section class="work" id="case" aria-labelledby="work-title">
-        <h2 id="work-title" class="visually-hidden">Arbeten</h2>
+        <h2 id="work-title" class="visually-hidden">Work</h2>
         <!-- role-attributen behåller tabellens betydelse för skärmläsare trots att CSS gör om layouten -->
         <table class="work__table" role="table">
           <thead role="rowgroup">

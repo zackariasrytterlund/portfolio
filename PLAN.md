@@ -69,7 +69,9 @@ Starta en lokal server i projektmappen och öppna http://localhost:5500 (eller a
 python3 -m http.server 5500
 ```
 
-Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp()`. Vid 768 px och uppåt används 12 kolumner.
+Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp()`. Vid 768 px och uppåt används 12 kolumner. På skärmar bredare än 1440 px centreras sidan och slidern går ut till fönstrets kanter.
+
+Sidan är testad på 320, 375, 767, 768, 1024, 1440 och 1920 px och har inget sidledsscroll på någon bredd.
 
 ## Steg
 
@@ -83,7 +85,7 @@ Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp(
 - [x] **Steg 7: Kompetenser.** Tools, Clients, Education och Hobbies.
 - [x] **Steg 8: Text.** Om mig-sektionen.
 - [x] **Steg 9: Dark mode.** Kontrollera mot Figmas dark mode-ramar och justera.
-- [ ] **Steg 10: Responsiv kontroll.** Testa på 375, 768, 1024 och 1440 px. Kontrollera tillgänglighet (kontrast, fokus och alt-texter).
+- [x] **Steg 10: Responsiv kontroll.** Testa på 375, 768, 1024 och 1440 px. Kontrollera tillgänglighet (kontrast, fokus och alt-texter).
 - [ ] **Steg 11: Publicera.** Slå på GitHub Pages och kontrollera den publicerade sajten.
 - [ ] **Steg 12: Undersidor.** Case, About och Contact. *Väntar på design i Figma.*
 

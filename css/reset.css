@@ -15,6 +15,7 @@
 }
 
 html {
+  overflow-x: clip; /* inget sidledsscroll, t.ex. när slidern går ut till kanten */
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }

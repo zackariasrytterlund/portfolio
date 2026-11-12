@@ -62,6 +62,10 @@
 .nav__toggle {
   min-width: 2.6875em; /* 43 px i Figma */
   text-align: left;
+  /* Större yta att trycka på (minst 40 px) utan att flytta texten */
+  padding: 12px;
+  margin: -12px;
+  box-sizing: content-box;
 }
 
 /* Mobilmenyn: fälls ut under översta raden */
@@ -230,5 +234,23 @@
 @media (min-width: 768px) {
   .slider__track .media-card {
     flex-basis: calc(907 / 1376 * 100%); /* 907 px av 1376 px i Figma */
+  }
+}
+
+/* Skärmar bredare än designen (1440 px): slidern går ut till fönstrets kanter */
+@media (min-width: 1441px) {
+  .slider {
+    --bleed: calc(var(--grid-margin) + (100vw - var(--design-size)) / 2);
+    overflow: visible;
+  }
+
+  .slider__track {
+    margin-inline: calc(-1 * var(--bleed));
+    padding-inline: var(--bleed);
+    scroll-padding-inline: var(--bleed);
+  }
+
+  .slider__track .media-card {
+    flex-basis: 907px;
   }
 }
