@@ -37,6 +37,7 @@
   --grid-columns: 6;
   --grid-margin: clamp(16px, calc(16px + 16 * (100vw - 375px) / 1065), 32px);
   --grid-gap: 16px;
+  --slider-gap: clamp(16px, calc(16px + 16 * (100vw - 375px) / 1065), 32px);
   --design-size: 1440px;
 
   /* ---- Rörelse ---- */

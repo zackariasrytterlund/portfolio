@@ -11,6 +11,7 @@ Vi jobbar ett steg i taget. Varje steg avslutas med en commit och en push till G
 | Teknik | HTML, vanlig CSS och lite JavaScript (bara för mobilmenyn och slidern) |
 | Sidor | Startsidan först. Undersidorna (Case, About, Contact) byggs sist, när de är designade i Figma |
 | Dark mode | Ja, följer besökarens systeminställning (`prefers-color-scheme`) |
+| Content slider på mobil | Visas som en swipebar slider (kort på 80 % bredd), eftersom den saknas i mobilramen |
 | Bilder | Grå platshållare i rätt format. Byts mot riktiga bilder i `images/` senare |
 | Repo | Publikt repo `zackariasrytterlund/portfolio` som publiceras med GitHub Pages |
 
@@ -77,7 +78,7 @@ Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp(
 - [x] **Steg 2: Navigation.** Desktop-nav och mobilnav som öppnas och stängs (JS, `aria-expanded`).
 - [x] **Steg 3: Link-komponent.** Lägena Default och Hover i storlekarna S och L. Hover-rörelsen görs i CSS.
 - [x] **Steg 4: Hero.** Rubriken och bento-rutnätet med Media Cards (16:9, 4:5 och 5:4).
-- [ ] **Steg 5: Content slider.** Horisontell slider med scroll-snap och fungerande pilar.
+- [x] **Steg 5: Content slider.** Horisontell slider med scroll-snap och fungerande pilar.
 - [ ] **Steg 6: Arbeten.** Projektlistan (nr, projekt, roll, år och länk).
 - [ ] **Steg 7: Kompetenser.** Tools, Clients, Education och Hobbies.
 - [ ] **Steg 8: Text.** Om mig-sektionen.
@@ -87,6 +88,5 @@ Storlekarna skalar mjukt mellan mobil (375 px) och desktop (1440 px) med `clamp(
 - [ ] **Steg 12: Undersidor.** Case, About och Contact. *Väntar på design i Figma.*
 
 ## Öppna frågor (tas upp när vi kommer dit)
-- Content slider finns inte i mobilramen (`38:403`). Ska den döljas på mobil eller ha en egen mobilversion?
 - Hover-färgen i dark mode finns inte i Figma. Tillfälligt används `#B8955A`, som kontrolleras i Steg 9.
 - Mellanstorlekar (cirka 768–1024 px) finns inte i Figma. Där skalar vi mellan mobil och desktop.

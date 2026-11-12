@@ -9,6 +9,8 @@
   <!-- Typsnitt: Space Grotesk (rubriker) och Inter (brödtext) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Pilarna ← → ingår inte i Googles standardurval, så de hämtas separat (måste ligga först) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&text=%E2%86%90%E2%86%92&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Space+Grotesk:wght@500;700&display=swap">
 
   <link rel="stylesheet" href="css/reset.css">
@@ -63,7 +65,21 @@
         <div class="media-card media-card--5-4 hero__card-5"></div>
       </section>
 
-      <!-- Steg 5: Content slider -->
+      <!-- Content slider -->
+      <section class="slider grid" aria-label="Projektbilder">
+        <div class="slider__track" tabindex="0" aria-label="Bilder, svep eller använd pilarna">
+          <!-- Platshållare: byt till <img src="images/..." alt="..."> inuti varje kort -->
+          <div class="media-card media-card--4-5"></div>
+          <div class="media-card media-card--4-5"></div>
+          <div class="media-card media-card--4-5"></div>
+          <div class="media-card media-card--4-5"></div>
+        </div>
+
+        <div class="slider__controls">
+          <button class="slider__button slider__button--prev" type="button" aria-label="Föregående bild">←</button>
+          <button class="slider__button slider__button--next" type="button" aria-label="Nästa bild">→</button>
+        </div>
+      </section>
       <!-- Steg 6: Arbeten  (id="case") -->
       <!-- Steg 7: Kompetenser -->
       <!-- Steg 8: Text      (id="about") -->

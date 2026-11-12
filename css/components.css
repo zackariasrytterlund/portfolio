@@ -153,3 +153,82 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* --------------------------------------------------------------------------
+   Content slider (Figma: Content slider)
+   Desktop: 4:5-kort på 907 × 1134 px med 32 px mellanrum.
+   Mobil: finns inte i Figma – samma slider, man sveper i sidled.
+   -------------------------------------------------------------------------- */
+
+.slider {
+  overflow: hidden;
+}
+
+.slider__track {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: var(--slider-gap);
+  padding-block: 10px;
+
+  /* Kortet går ut till skärmkanten, men startar i linje med griden */
+  margin-inline: calc(-1 * var(--grid-margin));
+  padding-inline: var(--grid-margin);
+  scroll-padding-inline: var(--grid-margin);
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none; /* dölj scrollbaren (Firefox) */
+}
+
+.slider__track::-webkit-scrollbar {
+  display: none; /* dölj scrollbaren (Chrome, Safari) */
+}
+
+.slider__track .media-card {
+  flex: 0 0 80%;
+  scroll-snap-align: start;
+}
+
+.slider__controls {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider__button {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: var(--text-sub-heading);
+  line-height: normal;
+  color: var(--text-primary);
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.slider__button:hover:not(:disabled) {
+  color: var(--text-secondary);
+}
+
+/* Liten knuff i pilens riktning vid hover */
+.slider__button--prev:hover:not(:disabled) { transform: translateX(-4px); }
+.slider__button--next:hover:not(:disabled) { transform: translateX(4px); }
+
+/* Pil som inte kan användas (början/slutet) – Figma: text/tertiary */
+.slider__button:disabled {
+  color: var(--text-tertiary);
+  cursor: default;
+}
+
+.slider__button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (min-width: 768px) {
+  .slider__track .media-card {
+    flex-basis: calc(907 / 1376 * 100%); /* 907 px av 1376 px i Figma */
+  }
+}
