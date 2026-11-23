@@ -268,3 +268,24 @@
     flex-basis: 704px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Ikoner (Phosphor-ikoner från Figma, 24 × 24 px)
+   SVG-filerna används som mask, så att ikonen får textens färg
+   (gul i dark mode) och samma hover-färg som länkarna.
+   -------------------------------------------------------------------------- */
+
+.icon {
+  display: block;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  mask: var(--icon) center / contain no-repeat;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+}
+
+.icon--envelope  { --icon: url("../images/icons/envelope.svg"); }
+.icon--instagram { --icon: url("../images/icons/instagram.svg"); }
+.icon--tiktok    { --icon: url("../images/icons/tiktok.svg"); }
+.icon--linkedin  { --icon: url("../images/icons/linkedin.svg"); }

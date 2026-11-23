@@ -300,3 +300,73 @@
   .skills__education { grid-column: 5 / span 4; grid-row: 2; }
   .skills__hobbies   { grid-column: 9 / span 4; grid-row: 2; }
 }
+
+/* ---- Footer / Kontakt (Figma: Footer) ----
+   Mobil: Contact, mejl och ikoner under varandra.
+   Desktop: allt på en rad – Contact, mejl till vänster, ikoner till höger. */
+
+.footer__inner {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-inline: 4px;
+}
+
+.footer__email {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  text-align: left;
+  line-height: normal;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Större träffyta (40 × 40 px) utan att flytta ikonen */
+.footer__social-link {
+  display: block;
+  padding: 8px;
+  margin: -8px;
+}
+
+.footer__email:focus-visible,
+.footer__social-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (min-width: 768px) {
+  .footer__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .footer__title {
+    white-space: nowrap;
+  }
+
+  .footer__content {
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-inline: 8px;
+  }
+
+  .footer__social {
+    gap: 28px;
+  }
+}

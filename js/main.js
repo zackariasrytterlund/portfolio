@@ -87,3 +87,34 @@ if (track && prevButton && nextButton) {
   window.addEventListener("resize", updateButtons);
   updateButtons();
 }
+
+// ==========================================================================
+// Footer – klick på mejladressen kopierar den (Figma-annotation)
+// ==========================================================================
+
+const copyButton = document.querySelector("[data-copy]");
+const copyStatus = document.querySelector("#copy-status");
+
+if (copyButton) {
+  const label = copyButton.querySelector(".footer__email-text");
+  const address = copyButton.dataset.copy;
+  let resetTimer;
+
+  copyButton.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(address);
+      label.textContent = "Copied!";
+      copyStatus.textContent = "Email address copied to clipboard";
+    } catch {
+      // Om kopiering inte är tillåten: öppna mejlprogrammet i stället
+      window.location.href = `mailto:${address}`;
+      return;
+    }
+
+    clearTimeout(resetTimer);
+    resetTimer = setTimeout(() => {
+      label.textContent = address;
+      copyStatus.textContent = "Click to copy the email address";
+    }, 2000);
+  });
+}
