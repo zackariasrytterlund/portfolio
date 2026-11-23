@@ -17,6 +17,7 @@
   --media-placeholder: #d9d9d9;
 
   /* ---- Typsnitt ---- */
+  --font-display: "Sarpanch", "Space Grotesk", system-ui, sans-serif;
   --font-heading: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
@@ -26,6 +27,14 @@
   --text-body: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
   --text-link-sm: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
   --text-link-lg: clamp(40px, calc(40px + 24 * (100vw - 375px) / 1065), 64px);
+
+  /* Nya stilar (Figma 2026-11-23)
+     1 Heading  – Sarpanch Black, versaler, radhöjd 0.8, letter-spacing -4 %
+     2 heading  – Sarpanch Black, versaler, radhöjd 98.83 %
+     Heading 2  – Space Grotesk Bold (kategorikort och projektnamn)        */
+  --text-1-heading: clamp(64px, calc(64px + 166 * (100vw - 375px) / 1065), 230px);
+  --text-2-heading: clamp(20px, calc(20px + 60 * (100vw - 375px) / 1065), 80px);
+  --text-category: clamp(20px, calc(20px + 20 * (100vw - 375px) / 1065), 40px);
 
   /* Heading: radhöjd som i Figma (71 px på mobil, 168 px på desktop) */
   --leading-heading: clamp(71px, calc(71px + 97 * (100vw - 375px) / 1065), 168px);

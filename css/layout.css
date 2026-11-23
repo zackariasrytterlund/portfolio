@@ -2,6 +2,12 @@
    Layout – grundtypografi, grid och sektioner.
    ========================================================================== */
 
+/* Ankarlänkar (Case, About) hamnar under den sticky navigationen, inte bakom den */
+html {
+  scroll-padding-top: calc(var(--text-link-sm) + 2 * var(--grid-margin));
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background-primary);
   color: var(--text-primary);
@@ -17,6 +23,31 @@ body {
   font-size: var(--text-heading);
   line-height: var(--leading-heading);
   letter-spacing: var(--tracking-heading);
+}
+
+.heading-1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: var(--text-1-heading);
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.heading-2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: var(--text-2-heading);
+  line-height: 0.9883;
+  text-transform: uppercase;
+}
+
+/* Figma: "Heading 2" (Space Grotesk Bold) – kategorikort och projektnamn */
+.category-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-category);
+  line-height: normal;
 }
 
 .sub-heading {

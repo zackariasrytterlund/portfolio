@@ -98,7 +98,7 @@ Sidan är testad på 320, 375, 767, 768, 1024, 1440 och 1920 px och har inget si
 ### Del 2: ny design (2026-11-23)
 Figma har fått en ny hero, en footer, ny sektionsordning och annotations för interaktion.
 
-- [ ] **Steg 13: Grund v2.** Typsnittet Sarpanch, nya textstorlekar (1 Heading, 2 heading, Heading 2), sticky nav, About → Kompetenser och Contact → `mailto:`.
+- [x] **Steg 13: Grund v2.** Typsnittet Sarpanch, nya textstorlekar (1 Heading, 2 heading, Heading 2), sticky nav, About → Kompetenser och Contact → `mailto:`.
 - [ ] **Steg 14: Hero v2.** "Digital Design • Filmmaking", två kategorikort med bilder och "Selected Work" med fyra projektrader.
 - [ ] **Steg 15: Projektrader med hover.** Desktop: kortet glider åt höger och projektinfo visas till vänster (Figma: Media Card Hover).
 - [ ] **Steg 16: Ny ordning och uppdaterade sektioner.** Om mig tas bort, Kompetenser får nya avstånd, slidern flyttas efter Kompetenser, får nya mått (704 × 880) och döljs på mobil.

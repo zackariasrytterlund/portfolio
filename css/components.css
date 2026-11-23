@@ -26,6 +26,13 @@
    Navigation (Figma: Navigation – Desktop / Mobile Open=False / Mobile Open=True)
    -------------------------------------------------------------------------- */
 
+/* Navigationen följer med när man scrollar (sticky), på desktop och mobil */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 .nav {
   background-color: var(--background-primary);
   padding: var(--grid-margin);
