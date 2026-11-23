@@ -101,7 +101,7 @@ Figma har fått en ny hero, en footer, ny sektionsordning och annotations för i
 - [x] **Steg 13: Grund v2.** Typsnittet Sarpanch, nya textstorlekar (1 Heading, 2 heading, Heading 2), sticky nav, About → Kompetenser och Contact → `mailto:`.
 - [x] **Steg 14: Hero v2.** "Digital Design • Filmmaking", två kategorikort med bilder och "Selected Work" med fyra projektrader.
 - [x] **Steg 15: Projektrader med hover.** Desktop: kortet glider åt höger och projektinfo visas till vänster (Figma: Media Card Hover).
-- [ ] **Steg 16: Ny ordning och uppdaterade sektioner.** Om mig tas bort, Kompetenser får nya avstånd, slidern flyttas efter Kompetenser, får nya mått (704 × 880) och döljs på mobil.
+- [x] **Steg 16: Ny ordning och uppdaterade sektioner.** Om mig tas bort, Kompetenser får nya avstånd, slidern flyttas efter Kompetenser, får nya mått (704 × 880) och döljs på mobil.
 - [ ] **Steg 17: Footer.** Contact, mejladress som kopieras vid klick, ikoner för Instagram, TikTok och LinkedIn.
 - [ ] **Steg 18: Kontroll och publicering.** Dark mode, responsiv kontroll och tillgänglighet, sedan push till GitHub Pages.
 

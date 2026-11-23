@@ -273,6 +273,14 @@
   gap: 16px;
 }
 
+/* Listorna har 8 px mellan raderna och är lite indragna (4 px mobil, 8 px desktop) */
+.skills__group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-inline: clamp(4px, calc(4px + 4 * (100vw - 375px) / 1065), 8px);
+}
+
 /* Mobil */
 .skills__title     { grid-column: 1 / -1;     grid-row: 1; }
 .skills__tools     { grid-column: 1 / span 3; grid-row: 2; }
@@ -291,20 +299,4 @@
   .skills__clients   { grid-column: 9 / span 4; grid-row: 1; }
   .skills__education { grid-column: 5 / span 4; grid-row: 2; }
   .skills__hobbies   { grid-column: 9 / span 4; grid-row: 2; }
-}
-
-/* ---- Text / Om mig (Figma: Text) ---- */
-
-.about > * {
-  align-self: start;
-}
-
-/* Mobil: rubrik och text under varandra */
-.about__title { grid-column: 1 / -1; grid-row: 1; }
-.about__text  { grid-column: 1 / -1; grid-row: 2; }
-
-/* Desktop: rubrik i kolumn 1, text i kolumn 5–10 */
-@media (min-width: 768px) {
-  .about__title { grid-column: 1 / span 4; grid-row: 1; }
-  .about__text  { grid-column: 5 / span 6; grid-row: 1; }
 }
