@@ -15,6 +15,7 @@
   --text-secondary: #5e5748; /* Figma: text/seconday – länkar i hover-läge */
   --text-tertiary: #83775a;
   --media-placeholder: #d9d9d9;
+  --brand-yellow: #f9c76a; /* fast gul, samma i båda temana */
 
   /* ---- Typsnitt ---- */
   --font-display: "Sarpanch", "Space Grotesk", system-ui, sans-serif;
@@ -22,7 +23,6 @@
   --font-body: "Inter", system-ui, sans-serif;
 
   /* ---- Textstorlekar (mobil → desktop) ---- */
-  --text-heading: clamp(56px, calc(56px + 76 * (100vw - 375px) / 1065), 132px);
   --text-sub-heading: clamp(24px, calc(24px + 8 * (100vw - 375px) / 1065), 32px);
   --text-body: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
   --text-link-sm: clamp(16px, calc(16px + 4 * (100vw - 375px) / 1065), 20px);
@@ -35,16 +35,14 @@
   --text-1-heading: clamp(64px, calc(64px + 166 * (100vw - 375px) / 1065), 230px);
   --text-2-heading: clamp(20px, calc(20px + 60 * (100vw - 375px) / 1065), 80px);
   --text-category: clamp(20px, calc(20px + 20 * (100vw - 375px) / 1065), 40px);
-
-  /* Heading: radhöjd som i Figma (71 px på mobil, 168 px på desktop) */
-  --leading-heading: clamp(71px, calc(71px + 97 * (100vw - 375px) / 1065), 168px);
+  /* 1 Heading: radhöjd 0.8 avrundad som i Figma (51 px mobil, 184 px desktop) */
+  --leading-1-heading: clamp(51px, calc(51px + 133 * (100vw - 375px) / 1065), 184px);
+  /* 2 heading: radhöjd som i Figma (28 px mobil, 111 px desktop) */
+  --leading-2-heading: clamp(28px, calc(28px + 83 * (100vw - 375px) / 1065), 111px);
 
   /* Sub-Heading och Body: radhöjd som i Figma (avrundad till hela pixlar) */
   --leading-sub-heading: clamp(31px, calc(31px + 10 * (100vw - 375px) / 1065), 41px);
   --leading-body: clamp(19px, calc(19px + 5 * (100vw - 375px) / 1065), 24px);
-
-  /* Heading har letter-spacing -7 % i Figma */
-  --tracking-heading: -0.07em;
 
   /* ---- Grid och avstånd ---- */
   --grid-columns: 6;

@@ -58,14 +58,39 @@
     <main>
       <!-- Hero -->
       <section class="hero grid" aria-labelledby="hero-title">
-        <h1 id="hero-title" class="heading hero__title">Digital Designer based in Gothenburg</h1>
+        <h1 id="hero-title" class="heading-2 hero__tagline">Digital Design • Filmmaking</h1>
 
-        <!-- Platshållare: byt till <img src="images/..." alt="..."> inuti varje kort -->
-        <div class="media-card media-card--16-9 hero__card-1"></div>
-        <div class="media-card media-card--4-5 hero__card-2"></div>
-        <div class="media-card media-card--5-4 hero__card-3"></div>
-        <div class="media-card media-card--5-4 hero__card-4"></div>
-        <div class="media-card media-card--5-4 hero__card-5"></div>
+        <!-- Kategorikort (Figma: Kategori) -->
+        <div class="category hero__category-1">
+          <img class="category__img" src="images/digital-design.jpg" alt="" width="1024" height="1280">
+          <p class="category__label category-text">Digital Design</p>
+        </div>
+        <div class="category hero__category-2">
+          <img class="category__img" src="images/video-editing.jpg" alt="" width="1024" height="1280">
+          <p class="category__label category-text">Video Editing</p>
+        </div>
+
+        <h2 id="case" class="heading-1 hero__selected">Selected Work</h2>
+
+        <!-- Projekt (Figma: Media Card – Default). Platshållare: lägg en <img> i project__card -->
+        <ul class="projects">
+          <li class="project">
+            <div class="media-card project__card"></div>
+            <h3 class="project__name">Azores</h3>
+          </li>
+          <li class="project">
+            <div class="media-card project__card"></div>
+            <h3 class="project__name">Farmmate</h3>
+          </li>
+          <li class="project">
+            <div class="media-card project__card"></div>
+            <h3 class="project__name">Familjehem</h3>
+          </li>
+          <li class="project">
+            <div class="media-card project__card"></div>
+            <h3 class="project__name">TON</h3>
+          </li>
+        </ul>
       </section>
 
       <!-- Content slider -->
@@ -84,7 +109,7 @@
         </div>
       </section>
       <!-- Arbeten -->
-      <section class="work" id="case" aria-labelledby="work-title">
+      <section class="work" aria-labelledby="work-title">
         <h2 id="work-title" class="visually-hidden">Work</h2>
         <!-- role-attributen behåller tabellens betydelse för skärmläsare trots att CSS gör om layouten -->
         <table class="work__table" role="table">

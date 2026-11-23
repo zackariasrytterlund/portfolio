@@ -2,30 +2,107 @@
    Sektioner – hero, arbeten, kompetenser och text.
    ========================================================================== */
 
-/* ---- Hero ----
-   Bento-rutnät med Media Cards. Placeringen följer Figma exakt:
-   mobil = 6 kolumner, desktop = 12 kolumner.                         */
+/* ---- Hero (Figma: Hero, 2026-11-23) ----
+   Rad 1: "Digital Design • Filmmaking"
+   Rad 2: två kategorikort
+   Rad 3: "Selected Work"
+   Rad 4–7: projektrader                                              */
 
 .hero > * {
   align-self: start;
 }
 
-/* Mobil (Figma: Hero – Breakpoint=Mobile) */
-.hero__title  { grid-column: 1 / -1;     grid-row: 1; }
-.hero__card-1 { grid-column: 1 / -1;     grid-row: 2; }        /* 16:9 */
-.hero__card-2 { grid-column: 1 / span 4; grid-row: 3 / span 2; } /* 4:5 */
-.hero__card-3 { grid-column: 5 / span 2; grid-row: 3; }        /* 5:4 */
-.hero__card-4 { grid-column: 1 / span 3; grid-row: 5; }        /* 5:4 */
-.hero__card-5 { grid-column: 4 / span 3; grid-row: 5; }        /* 5:4 */
+.hero__tagline  { grid-column: 1 / -1; }
+.hero__selected { grid-column: 1 / -1; }
+.projects       { grid-column: 1 / -1; }
 
-/* Desktop (Figma: Hero – Breakpoint=Desktop) */
+.hero__category-1 { grid-column: 1 / span 3; }
+.hero__category-2 { grid-column: 4 / span 3; }
+
+/* Kategorikort: bild med text i nederkant */
+.category {
+  position: relative;
+  aspect-ratio: 163.5 / 200; /* mobil: ramen är 200 px hög, bilden 4:5 */
+}
+
+.category__img {
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--corner-radius);
+  background-color: #000;
+}
+
+.category__label {
+  position: absolute;
+  left: clamp(10px, calc(10px + 20 * (100vw - 375px) / 1065), 30px);
+  bottom: clamp(62px, calc(62px + 49 * (100vw - 375px) / 1065), 111px);
+  width: clamp(95px, calc(95px + 56 * (100vw - 375px) / 1065), 151px);
+  transform: translateY(100%);
+  /* Alltid gul, så att texten syns mot den mörka bilden även i dark mode */
+  color: var(--brand-yellow);
+}
+
+/* Projektrader */
+.projects {
+  display: grid;
+  gap: 16px;
+}
+
+/* Mobil: kort i kolumn 1–3, namn i kolumn 4–6 */
+.project {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+  align-items: center;
+}
+
+.project__card {
+  grid-column: 1 / span 3;
+  aspect-ratio: 16 / 9;
+}
+
+.project__name {
+  grid-column: 4 / span 3;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: var(--text-sub-heading);
+  line-height: var(--leading-sub-heading);
+}
+
 @media (min-width: 768px) {
-  .hero__title  { grid-column: 1 / span 11; grid-row: 1; }
-  .hero__card-1 { grid-column: 1 / -1;      grid-row: 2; }
-  .hero__card-2 { grid-column: 1 / span 6;  grid-row: 3; }
-  .hero__card-3 { grid-column: 7 / span 6;  grid-row: 3; }
-  .hero__card-4 { grid-column: 1 / span 4;  grid-row: 4; }
-  .hero__card-5 { grid-column: 5 / span 8;  grid-row: 4; }
+  .hero__selected   { grid-column: 1 / span 11; }
+  .hero__category-1 { grid-column: 1 / span 6; }
+  .hero__category-2 { grid-column: 7 / span 6; }
+
+  .category {
+    aspect-ratio: 4 / 5;
+  }
+
+  /* Desktop: kortet till vänster (6 kolumner), namnet till höger */
+  .project {
+    display: block;
+    position: relative;
+    padding-block: 10px;
+  }
+
+  .project__card {
+    width: calc(50% - 8px); /* 6 av 12 kolumner = 680 px vid 1440 */
+    aspect-ratio: 680 / 383;
+  }
+
+  .project__name {
+    position: absolute;
+    top: 50%;
+    left: calc(834 / 1376 * 100%);
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-size: var(--text-category);
+    line-height: normal;
+  }
 }
 
 /* ---- Arbeten (Figma: Arbeten) ----
