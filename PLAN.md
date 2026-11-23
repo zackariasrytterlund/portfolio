@@ -13,8 +13,12 @@ Vi jobbar ett steg i taget. Varje steg avslutas med en commit och en push till G
 | Teknik | HTML, vanlig CSS och lite JavaScript (bara för mobilmenyn och slidern) |
 | Sidor | Startsidan först. Undersidorna (Case, About, Contact) byggs sist, när de är designade i Figma |
 | Dark mode | Ja, följer besökarens systeminställning (`prefers-color-scheme`) |
-| Content slider på mobil | Visas som en swipebar slider (kort på 80 % bredd), eftersom den saknas i mobilramen |
+| Content slider på mobil | Döljs på mobil, som i Figma (beslut 2026-11-23) |
 | Bilder | Grå platshållare i rätt format. Byts mot riktiga bilder i `images/` senare |
+| About-länken | Leder till Kompetenser, eftersom Om mig-sektionen är borttagen (2026-11-23) |
+| Contact-länken | Öppnar mejl med `mailto:` (Figma-annotation) |
+| Kategorikort | Digital Design till vänster även på mobil (2026-11-23) |
+| Navigation | Sticky på både desktop och mobil (2026-11-23) |
 | Repo | Publikt repo `zackariasrytterlund/portfolio` som publiceras med GitHub Pages |
 
 ## Källor i Figma
@@ -91,7 +95,18 @@ Sidan är testad på 320, 375, 767, 768, 1024, 1440 och 1920 px och har inget si
 - [x] **Steg 11: Publicera.** Slå på GitHub Pages och kontrollera den publicerade sajten.
 - [ ] **Steg 12: Undersidor.** Case, About och Contact. *Väntar på design i Figma.*
 
+### Del 2: ny design (2026-11-23)
+Figma har fått en ny hero, en footer, ny sektionsordning och annotations för interaktion.
+
+- [ ] **Steg 13: Grund v2.** Typsnittet Sarpanch, nya textstorlekar (1 Heading, 2 heading, Heading 2), sticky nav, About → Kompetenser och Contact → `mailto:`.
+- [ ] **Steg 14: Hero v2.** "Digital Design • Filmmaking", två kategorikort med bilder och "Selected Work" med fyra projektrader.
+- [ ] **Steg 15: Projektrader med hover.** Desktop: kortet glider åt höger och projektinfo visas till vänster (Figma: Media Card Hover).
+- [ ] **Steg 16: Ny ordning och uppdaterade sektioner.** Om mig tas bort, Kompetenser får nya avstånd, slidern flyttas efter Kompetenser, får nya mått (704 × 880) och döljs på mobil.
+- [ ] **Steg 17: Footer.** Contact, mejladress som kopieras vid klick, ikoner för Instagram, TikTok och LinkedIn.
+- [ ] **Steg 18: Kontroll och publicering.** Dark mode, responsiv kontroll och tillgänglighet, sedan push till GitHub Pages.
+
 ## Öppna frågor (tas upp när vi kommer dit)
-- Contact-länken i navigeringen pekar på `#contact`, men startsidan har ingen kontaktsektion i Figma än.
+- Kategorikorten och projektraderna leder ingenstans än, eftersom case-sidorna inte är designade.
+- Några texter i Figma är hårdkodat svarta (`black`) i stället för `text/primary`. Jag använder `text/primary`, så att de blir gula i dark mode.
 - Hover-färgen i dark mode finns inte i Figma. `#B8955A` används (kontrast 6,7:1). Lägg gärna till den som variabel i Figma.
 - Mellanstorlekar (cirka 768–1024 px) finns inte i Figma. Där skalar vi mellan mobil och desktop.
