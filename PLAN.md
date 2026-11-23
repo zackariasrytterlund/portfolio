@@ -38,7 +38,9 @@ Vi jobbar ett steg i taget. Varje steg avslutas med en commit och en push till G
 | `text/primary` | `#111110` |
 | `text/seconday` (hover) | `#5E5748` |
 | `text/tertiary` | `#83775A` |
-| Heading | Space Grotesk Bold, 132 px (mobil 56 px), radhöjd 168 px (mobil 71 px), letter-spacing −7 % |
+| 1 Heading | Sarpanch Black, versaler, 230 px (mobil 64 px), radhöjd 184 px (mobil 51 px), letter-spacing −4 % |
+| 2 heading | Sarpanch Black, versaler, 80 px (mobil 20 px), radhöjd 111 px (mobil 28 px) |
+| Heading 2 (kategori) | Space Grotesk Bold, 40 px (mobil 20 px) |
 | Sub-Heading | Space Grotesk Medium, 32 px (mobil 24 px), radhöjd 41 px (mobil 31 px) |
 | Body | Inter Regular, 20 px (mobil 16 px), radhöjd 24 px (mobil 19 px) |
 | Link S | Inter Regular, 20 px (mobil 16 px) |
@@ -56,10 +58,10 @@ css/
   tokens.css      – färger, typsnitt och avstånd som CSS-variabler (inkl. dark mode)
   layout.css      – grid, containers och brytpunkter
   components.css  – nav, länkar, media-kort och slider
-  sections.css    – hero, arbeten, kompetenser och text
+  sections.css    – hero, projekt, arbeten, kompetenser och footer
 js/
-  main.js         – mobilmeny och slider-pilar
-images/           – bilder (platshållare tills vidare)
+  main.js         – mobilmeny, slider-pilar och kopiera mejl
+images/           – kategoribilder (JPEG) och icons/ (SVG från Figma)
 ```
 
 ## Arbetssätt per steg
@@ -103,10 +105,11 @@ Figma har fått en ny hero, en footer, ny sektionsordning och annotations för i
 - [x] **Steg 15: Projektrader med hover.** Desktop: kortet glider åt höger och projektinfo visas till vänster (Figma: Media Card Hover).
 - [x] **Steg 16: Ny ordning och uppdaterade sektioner.** Om mig tas bort, Kompetenser får nya avstånd, slidern flyttas efter Kompetenser, får nya mått (704 × 880) och döljs på mobil.
 - [x] **Steg 17: Footer.** Contact, mejladress som kopieras vid klick, ikoner för Instagram, TikTok och LinkedIn.
-- [ ] **Steg 18: Kontroll och publicering.** Dark mode, responsiv kontroll och tillgänglighet, sedan push till GitHub Pages.
+- [x] **Steg 18: Kontroll och publicering.** Dark mode, responsiv kontroll och tillgänglighet, sedan push till GitHub Pages.
 
 ## Öppna frågor (tas upp när vi kommer dit)
 - Kategorikorten och projektraderna leder ingenstans än, eftersom case-sidorna inte är designade.
 - Några texter i Figma är hårdkodat svarta (`black`) i stället för `text/primary`. Jag använder `text/primary`, så att de blir gula i dark mode.
 - Hover-färgen i dark mode finns inte i Figma. `#B8955A` används (kontrast 6,7:1). Lägg gärna till den som variabel i Figma.
+- På mycket smala skärmar (320 px) går "2026" i Arbeten-tabellen 5 px utanför sin kolumn, men sidan scrollar inte i sidled.
 - Mellanstorlekar (cirka 768–1024 px) finns inte i Figma. Där skalar vi mellan mobil och desktop.
