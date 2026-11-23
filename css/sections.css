@@ -65,6 +65,16 @@
   aspect-ratio: 16 / 9;
 }
 
+.project__info {
+  display: none; /* bara desktop */
+}
+
+.project:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+  border-radius: var(--corner-radius);
+}
+
 .project__name {
   grid-column: 4 / span 3;
   font-family: var(--font-heading);
@@ -87,11 +97,13 @@
     display: block;
     position: relative;
     padding-block: 10px;
+    container-type: inline-size; /* gör att kortet kan glida exakt till högerkanten */
   }
 
   .project__card {
     width: calc(50% - 8px); /* 6 av 12 kolumner = 680 px vid 1440 */
     aspect-ratio: 680 / 383;
+    transition: transform 0.7s var(--ease-out);
   }
 
   .project__name {
@@ -102,6 +114,68 @@
     font-weight: 700;
     font-size: var(--text-category);
     line-height: normal;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Projektinfo till vänster (Figma: x 148, bredd 348 av 1376) */
+  .project__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    top: 50%;
+    left: calc(148 / 1376 * 100%);
+    width: calc(348 / 1376 * 100%);
+    opacity: 0;
+    transform: translate(-24px, -50%);
+    transition:
+      opacity 0.3s ease,
+      transform 0.6s var(--ease-out);
+    pointer-events: none;
+  }
+
+  .project__info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Hover-läget (Figma: Media Card – Hover): kortet glider till höger,
+   namnet tonar ut och projektinfon tonar in från vänster.
+   Gäller bara enheter med mus, och även tangentbordsfokus.          */
+@media (min-width: 768px) {
+  .project:focus-visible .project__card,
+  .project:focus-within .project__card {
+    transform: translateX(calc(100cqw - 100% - 10px));
+  }
+
+  .project:focus-visible .project__name,
+  .project:focus-within .project__name {
+    opacity: 0;
+  }
+
+  .project:focus-visible .project__info,
+  .project:focus-within .project__info {
+    opacity: 1;
+    transform: translate(0, -50%);
+    transition-delay: 0.15s;
+  }
+}
+
+@media (min-width: 768px) and (hover: hover) {
+  .project:hover .project__card {
+    transform: translateX(calc(100cqw - 100% - 10px));
+  }
+
+  .project:hover .project__name {
+    opacity: 0;
+  }
+
+  .project:hover .project__info {
+    opacity: 1;
+    transform: translate(0, -50%);
+    transition-delay: 0.15s;
   }
 }
 
